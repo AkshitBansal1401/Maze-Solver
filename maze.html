@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Maze Solver</title>
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="Favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="Favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="Favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="Favicon/site.webmanifest" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/menu.css" />
+    <link rel="stylesheet" href="css/grid.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <!-- Sidebar -->
+      <aside id="menu">
+        <header class="header">
+          <img
+            src="Favicon/android-chrome-192x192.png"
+            alt="Maze Icon"
+            class="logo"
+          />
+          <h4>Maze Solver</h4>
+        </header>
+
+        <div class="section-box">
+          <section class="choice" id="choice_2">
+            <label for="slct_2" class="choice_label"
+              ><h6>Maze Generation Algorithms:</h6></label
+            >
+            <div class="select">
+              <select id="slct_2" required>
+                <option hidden selected value="0">Custom</option>
+                <option value="1">Kruskal's Algorithm</option>
+                <option value="2">Prim's Algorithm</option>
+                <option value="3">Wilson's Algorithm</option>
+                <option value="4">Recursive Division</option>
+              </select>
+              <svg><use xlink:href="#select-arrow-down"></use></svg>
+            </div>
+          </section>
+        </div>
+
+        <div class="section-box">
+          <section class="choice" id="choice_1">
+            <label for="slct_1" class="choice_label"
+              ><h6>Maze Solving Algorithms:</h6></label
+            >
+            <div class="select">
+              <select id="slct_1" required>
+                <option selected value="1">Breadth First Search (BFS)</option>
+                <option value="2">Depth First Search (DFS)</option>
+                <option value="3">Bidirectional BFS</option>
+                <option value="4">Greedy Best First</option>
+                <option value="5">Dijkstra's Algorithm</option>
+                <option value="6">A* Algorithm</option>
+              </select>
+              <svg><use xlink:href="#select-arrow-down"></use></svg>
+            </div>
+          </section>
+        </div>
+
+        <div id="button_1">
+          <button class="my_button clear-btn" id="clear">Clear Maze</button>
+        </div>
+
+        <div id="button_2">
+          <button class="my_button generate-solve-btn" id="play">
+            Solve Maze
+          </button>
+        </div>
+
+        <svg class="sprites">
+          <symbol id="select-arrow-down" viewBox="0 0 10 6">
+            <polyline points="1 1 5 5 9 1"></polyline>
+          </symbol>
+        </svg>
+      </aside>
+
+      <main id="visualizer" class="grid-area">
+        <div id="grid"></div>
+      </main>
+    </div>
+
+    <div id="hider"></div>
+
+    <script src="js/properties.js" defer></script>
+    <script src="js/maze_generators.js" defer></script>
+    <script src="js/maze_solvers.js" defer></script>
+    <script src="js/menu.js" defer></script>
+    <script src="js/visualizer.js" defer></script>
+    <script src="js/script.js" defer></script>
+  </body>
+</html>
